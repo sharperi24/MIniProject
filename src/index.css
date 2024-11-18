@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;  
+
+@layer base {
+  body {
+    transition: colors 200ms;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(
+      135deg,
+      #f0e6ff 0%,    /* Light purple */
+      #e1d0ff 50%,   /* Mid purple */
+      #d4baff 100%   /* Slightly darker purple */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+.vintage-gradient {
+  background: linear-gradient(
+    135deg,
+    #f0e6ff 0%,    /* Light purple */
+    #e1d0ff 50%,   /* Mid purple */
+    #d4baff 100%   /* Slightly darker purple */
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.vintage-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading-primary {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  /* color: #4A5568; */
+  font-family: 'Crimson Text', serif;
+}
+
+.heading-secondary {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2D3748;
+  font-family: 'Crimson Text', serif;
+}
+
+.text-body {
+  color: #2D3748;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dark-gradient {
+  background: linear-gradient(
+    135deg,
+    #1a1625 0%,    /* Darker purple */
+    #231f35 50%,   /* Mid purple */
+    #2d2b38 100%   /* Lighter purple */
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Light theme specific styles */
+.light-theme-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e7ff;
+}
+
+.light-theme-input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1d5db;
+  color: #4B5563;
+}
+
+/* Dark theme specific styles */
+.dark-theme-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme-input {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #F5F5F5;
+}
+
+.font-body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading-primary.text-white {
+  color: white !important; /* Use !important as a last resort */
+}
+
+
+
+.home-container {
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  position: relative;
+}
+
+.content-wrapper {
+  position: relative;
+  padding: 2rem;
+  z-index: 1;
+}
+
+/* Optional: Add a subtle animation to make the gradient more dynamic */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main gradient background that covers everything under navbar */
+.app-container {
+  min-height: calc(100vh - 64px);
+  margin-top: 64px; /* Height of navbar */
+  background: radial-gradient(
+    circle at center,
+    rgb(37, 0, 77) 100%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(94, 38, 108, 0.7) 50%
+  );
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.home-gradient {
+  background: radial-gradient(
+    circle at center,
+    rgba(233, 213, 255, 0.9) 0%,
+    rgba(216, 180, 254, 0.8) 50%,
+    rgba(95, 39, 151, 0.544) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+
