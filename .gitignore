@@ -39,3 +39,5 @@ temp/
 # React Native
 .expo/
 .expo-shared/
+
+.bolt/
